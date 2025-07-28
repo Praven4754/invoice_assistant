@@ -36,8 +36,8 @@ This project uses `uv` as the package manager.
 
    ```env
    GOOGLE_API_KEY = <your_google_api_key>
-   SENDGRID_API_KEY = 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
-   FROM_EMAIL = aadhidham@gmail.com
+   SENDGRID_API_KEY = <your_sendgrid_api_key>
+   FROM_EMAIL = <your_verified_mail_for_sendgrid>
    TO_EMAIL = <any_email>
    ```
 
