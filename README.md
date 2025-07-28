@@ -40,6 +40,7 @@ This project uses `uv` as the package manager.
    FROM_EMAIL = <your_verified_mail_for_sendgrid>
    TO_EMAIL = <any_email>
    ```
+   Note: FROM_EMAIL should be the one you verified in the Sendgrid with your API
 
 
 ## 📂 Project Structure
