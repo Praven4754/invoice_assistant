@@ -2,16 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOTENV_PATH = "/envfile/.env"
+        DOTENV_PATH = "/envfile/.env"  // Path inside Jenkins container
     }
 
     stages {
-        stage('Install Dependencies') {
-            steps {
-                sh 'pip install -r requirements.txt'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
