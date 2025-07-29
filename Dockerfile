@@ -1,18 +1,19 @@
-# Use Python base image
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy all project files
+# Copy code
 COPY . .
 
 # Install dependencies
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose Gradio port (if you use it)
+# Load .env manually if needed (not strictly required unless your app does it)
+# RUN pip install python-dotenv
+
+# Expose app port
 EXPOSE 7860
 
-# Run your main file
+# Run your main app
 CMD ["python", "app.py"]
