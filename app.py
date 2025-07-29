@@ -77,4 +77,4 @@ async def chat(user_input: str, history):
     return result["messages"][-1].content
 
 if __name__ == "__main__":
-    gr.ChatInterface(chat, type="messages").launch()
+    gr.ChatInterface(chat, type="messages").launch(server_name="0.0.0.0", server_port=7860)
