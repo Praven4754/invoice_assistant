@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Update the path to match your actual .env location
-        DOTENV_PATH = "E:/gitrepo/invoice_assistant/.env"
+        DOTENV_PATH = "E:/env file/.env"
     }
 
     stages {
