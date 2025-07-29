@@ -4,8 +4,7 @@ from dotenv import load_dotenv
 from tools import tools
 
 load_dotenv(override=True)
-
-groq_api_key = os.getenv('GROQ_API_KEY')
+# groq_api_key = os.getenv('GROQ_API_KEY')
 google_api_key = os.getenv('GOOGLE_API_KEY')
 
 llm = ChatOpenAI(
