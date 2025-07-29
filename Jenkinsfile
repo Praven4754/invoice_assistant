@@ -7,11 +7,12 @@ pipeline {
     }
 
     stages {
-        stage('Clone Repo') {
+            stage('Clone Repo') {
             steps {
-                git 'https://github.com/Praven4754/invoice_assistant.git'
+                git branch: 'main', url: 'https://github.com/Praven4754/invoice_assistant.git'
             }
         }
+
 
         stage('Build Docker Image') {
             steps {
