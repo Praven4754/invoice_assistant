@@ -2,12 +2,16 @@ pipeline {
     agent any
 
     environment {
-        // Update the path to match your actual .env location
-        DOTENV_PATH = "E:/env file/.env"
+        DOTENV_PATH = "/envfile/.env"
     }
 
     stages {
-        
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
@@ -20,7 +24,7 @@ pipeline {
             steps {
                 script {
                     docker.image('invoice-assistant').run(
-                        "-p 7860:7860 --env-file \"${env.DOTENV_PATH}\""
+                        "--env-file ${DOTENV_PATH} -p 7860:7860"
                     )
                 }
             }
